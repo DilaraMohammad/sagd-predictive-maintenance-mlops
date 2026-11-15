@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from main import app
+from API.main import app
 clinet= TestClient(app)
 def test_read_root():
     response= clinet.get("/")
