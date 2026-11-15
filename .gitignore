@@ -1,0 +1,13 @@
+_pycache_/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.vscode/
+data/raw/*
+data/processed/*
+*.csv
+*.db
+*.sqlite3
+*.log
