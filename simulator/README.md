@@ -1,7 +1,8 @@
 # SAGD Predictive Maintenance & Intelligence Platform
 
 ## Overview
-A production-ready MLOps and automated intelligence pipeline designed for Steam-Assisted Gravity Drainage (SAGD) operations. The platform transforms raw well sensor streams into real-time failure predictions to ensure operational continuity and mitigate critical asset risks.
+A production-ready MLOps and automated intelligence pipeline designed for Steam-Assisted Gravity Drainage (SAGD) operations. The platform transforms raw well sensor streams into real-time failure predictions-forecasting asset failures 20 minutes in advance 
+to prevent critcal downtime and ensure operational safety.
 
 ## Core Capabilities
 * **Data Ingestion & Validation:** Streamlines telemetry inputs, enforcing strict checks for missing values, infinite anomalies, and schema alignment before model processing.
