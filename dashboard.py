@@ -11,7 +11,7 @@ st.set_page_config(
 st.title("SAGD Well Failure MLOps Monitoring Dashboard")
 st.markdown("Real-time telemetry and predictive failure monitoring consuming live API endpoints from Kubernetes cluster.")
 
-API_URL = st.sidebar.text_input("API Base URL", value="http://127.0.0.1:8000")
+API_URL = st.sidebar.text_input("API Base URL", value="http://127.0.0.1:49677")
 auto_refresh = st.sidebar.checkbox("Live Stream Auto-Refresh", value=True)
 refresh_rate = st.sidebar.slider("Refresh Interval (s)", 2, 10, 3)
 
