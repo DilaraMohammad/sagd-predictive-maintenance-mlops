@@ -2,8 +2,6 @@
 
 Production-grade MLOps pipeline for Steam-Assisted Gravity Drainage (SAGD) well operations, designed to forecast asset failures 20 minutes in advance. The system handles real-time data streaming, feature validation, XGBoost model inference via FastAPI, and live monitoring through Streamlit.
 
-This dashboard for monitoring the operations can be accessed here: [Streamlit Cloud Dashboard](https://sagd-predictive-maintenance-mlops-hyqydmhnbtmqpg74jsfxm6.streamlit.app)
-
 ## Tech Stack
 * **Language:** Python 3.10
 * **API Framework:** FastAPI, Uvicorn
