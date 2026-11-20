@@ -4,7 +4,7 @@ import requests
 import time
 
 PROCESSED_FILE = Path(__file__).resolve().parent.parent / "data" / "processed" / "sagd_processed.csv"
-API_URL = "http://localhost:8000/predict"
+API_URL = "http://127.0.0.1:55474"
 
 def stream_data():
     if not PROCESSED_FILE.exists():
@@ -27,7 +27,7 @@ def stream_data():
             payload = {"features": features_dict}
 
             try:
-                response = requests.post(API_URL, json=payload)
+                response = requests.post(f"{API_URL}/predict", json=payload)
                 if response.status_code == 200:
                     print(f"Row sent successfully! Response: {response.json()}")
                 else:

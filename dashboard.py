@@ -11,7 +11,7 @@ st.set_page_config(
 st.title("SAGD Well Failure MLOps Monitoring Dashboard")
 st.markdown("Real-time telemetry and predictive failure monitoring consuming live API endpoints from Kubernetes cluster.")
 
-API_URL = st.sidebar.text_input("API Base URL", value="http://localhost:8000")
+API_URL = st.sidebar.text_input("API Base URL", value="http://127.0.0.1:55474")
 auto_refresh = st.sidebar.checkbox("Live Stream Auto-Refresh", value=True)
 refresh_rate = st.sidebar.slider("Refresh Interval (s)", 2, 10, 3)
 
@@ -19,9 +19,12 @@ def fetch_cluster_logs():
     try:
         response = requests.get(f"{API_URL}/history", timeout=5)
         if response.status_code == 200:
-            return response.json()
-        return []
-    except Exception:
+            data = response.json()
+            return data
+        else:
+            return []
+    except Exception as e:
+        st.error(f"Connection Error: {e}")
         return []
 
 raw_data = fetch_cluster_logs()
